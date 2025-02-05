@@ -8,23 +8,22 @@ public class PartyAffiliation {
         Scanner in = new Scanner(System.in);
         System.out.print("Enter your party [D,R,I] or other: ");
 
-        //Menu for user's choice
+        //Get Party
         party = in.nextLine();
-        party = party.toUpperCase();
 
-        switch(party) {
-            case "D":
-                System.out.println("You get a Democratic Donkey.");
-                break;
-            case "R":
-                System.out.println("You get a Republican Elephant.");
-                break;
-            case "I":
-                System.out.println("You get an Independent Man.");
-                break;
-            default:
-                System.out.println("You chose Other.");
+        if (party.equalsIgnoreCase("D")) {
+            System.out.println("You get a Democratic Donkey.");
         }
+        else if (party.equalsIgnoreCase("R")) {
+            System.out.println("You get a Republican Elephant.");
+        }
+        else if (party.equalsIgnoreCase("I")) {
+            System.out.println("You get an Independent Man.");
+        }
+        else{
+            System.out.println("You chose Other.");
+        }
+
 
     }
 }
